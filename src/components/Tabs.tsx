@@ -1,4 +1,4 @@
-"use client";
+"use client"; // <- Directive only needed when using the app directory
 
 import { type ReactNode, useState } from "react";
 

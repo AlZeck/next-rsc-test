@@ -1,9 +1,6 @@
-// define the type for the pokemon object from PokeAPI
+import { Pokemon } from "@/utils/pokeapi";
 
-import { getPokemon } from "@/utils/pokeapi";
-
-export default async function Pokemon({ id }: { id: number | string }) {
-  const pokemon = await getPokemon(id);
+export default function ClientPokemon({ pokemon }: { pokemon: Pokemon }) {
   return (
     <div className="flex flex-col items-center">
       {/* eslint-disable-next-line @next/next/no-img-element */}
