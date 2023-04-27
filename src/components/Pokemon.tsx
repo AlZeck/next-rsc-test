@@ -1,8 +1,8 @@
 // define the type for the pokemon object from PokeAPI
 
 import { getPokemon } from "@/utils/pokeapi";
-
-export default async function Pokemon({ id }: { id: number | string }) {
+import RSC from "@/utils/sfc";
+async function Pokemon({ id }: { id: number | string }) {
   const pokemon = await getPokemon(id);
   return (
     <div className="flex flex-col items-center">
@@ -22,3 +22,5 @@ export default async function Pokemon({ id }: { id: number | string }) {
     </div>
   );
 }
+
+export default RSC(Pokemon);
